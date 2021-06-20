@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" type = "text/css" href="/public/CSS/app.css">
+</head>
+<body>
+    <div class="container">
+        <fieldset>
+            <form action="/" method="POST">
+                <input type="search" name="city" class="city-input" placeholder="Enter a City" autocomplete='off' required>
+                <input type="submit" value="Search" class="search-input"> 
+            </form>
+            <% if(weather !== null){ %>
+                <h3><%= weather %></h3>
+              <% } %>
+      
+              <% if(error !== null){ %>
+                <p><%= error %></p>
+              <% } %>
+        </fieldset>
+    </div>
+</body>
+</html>
